@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка новин</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        footer {
+            background: linear-gradient(135deg, #333, #555);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            margin: 10px 0;
+        }
+
+        .star {
+            position: absolute;
+            top: 0;
+            animation: floating 10s infinite ease-in-out;
+            font-size: 18px;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-20px);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .star:nth-child(1) {
+            left: 10%;
+            animation-duration: 12s;
+        }
+
+        .star:nth-child(2) {
+            left: 40%;
+            animation-duration: 10s;
+        }
+
+        .star:nth-child(3) {
+            left: 70%;
+            animation-duration: 14s;
+        }
+
+        .star:nth-child(4) {
+            left: 25%;
+            animation-duration: 15s;
+        }
+
+        .btn-custom {
+            background: #ff5722;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Новини</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Категорії</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Останні новини</h1>
+        <div class="row">
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="https://canto-wp-media.s3.amazonaws.com/app/uploads/2019/07/19194417/insert-image-html.jpg" class="card-img-top" alt="Технології">
+                    <div class="card-body">
+                        <h5 class="card-title">Інновації в IT-сфері</h5>
+                        <p class="card-text">Технологічні компанії представили нові інновації у сфері штучного інтелекту та робототехніки.</p>
+                        <a href="#" class="btn btn-custom">Читати далі</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="https://zprz.city/uploads/news/resize/w/1200x1200/niah27ua93jaqfp7jondqwznciinpg4m.jpg" class="card-img-top" alt="Екологія">
+                    <div class="card-body">
+                        <h5 class="card-title">Екологічний прорив в Україні</h5>
+                        <p class="card-text">Уряд анонсував нові заходи для зменшення шкідливих викидів та впровадження зеленої енергії.</p>
+                        <a href="#" class="btn btn-custom">Читати далі</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="https://www.rbc.ua/static/img/g/e/gettyimages_82300315_1300x820.jpg" class="card-img-top" alt="Спорт">
+                    <div class="card-body">
+                        <h5 class="card-title">Перемога на чемпіонаті світу</h5>
+                        <p class="card-text">На чемпіонаті світу зі спорту українські атлети завоювали кілька медалей та встановили рекорди.</p>
+                        <a href="#" class="btn btn-custom">Читати далі</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Сайт новин. Всі права захищені.</p>
+            <div class="star">★</div>
+            <div class="star">✦</div>
+            <div class="star">★</div>
+            <div class="star">✦</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
