@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function validateForm() {
+            let username = document.forms["registrationForm"]["username"].value;
+            let email = document.forms["registrationForm"]["email"].value;
+            let password = document.forms["registrationForm"]["password"].value;
+            if (username == "" || email == "" || password == "") {
+                alert("Усі поля повинні бути заповнені!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Реєстрація користувача</h2>
+    <form name="registrationForm" method="POST" onsubmit="return validateForm()">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Зареєструватися</button>
+    </form>
+</body>
+</html>
+<script>
+    function validateForm() {
+        let username = document.forms["registrationForm"]["username"].value;
+        let email = document.forms["registrationForm"]["email"].value;
+        let password = document.forms["registrationForm"]["password"].value;
+        
+        if (username == "" || email == "" || password == "") {
+            alert("Усі поля повинні бути заповнені!");
+            return false;
+        }
+        return true;
+    }
+</script>
